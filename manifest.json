@@ -1,22 +1,27 @@
 {
-    "name": "Gameday",
-    "description": "Shows when your favorite teams are playing.",
-    "version": "1.0",
-    "manifest_version": 3,
-    "host_permissions": [
-      "*://stats.nba.com/*"
-    ],
-    "action": {
-      "default_popup": "hello.html",
-      "default_icon": {
-        "16": "basketball-nogame.png",
-        "48": "basketball-nogame.png",
-        "128": "basketball-nogame.png"
-      },
-      "default_title": "Gameday"
+  "name": "Gameday",
+  "description": "Shows when your favorite teams are playing.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "host_permissions": [
+    "*://stats.nba.com/*"
+  ],
+  "action": {
+    "default_popup": "hello.html",
+    "default_icon": {
+      "16": "icons/basketball-nogame.png",
+      "48": "icons/basketball-nogame.png",
+      "128": "icons/basketball-nogame.png"
     },
-    "background": {
-      "service_worker": "background.js"
-    }
+    "default_title": "Gameday"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [
+  {
+  "resources": ["icons/basketball-game.png", "icons/basketball-nogame.png"],
+  "matches": ["<all_urls>"]
   }
-  
+  ]
+}
